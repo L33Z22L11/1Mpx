@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html {
+            font: 5vw Montserrat, "微软雅黑", sans-serif;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            background: #333;
+            color: #eee;
+        }
+    </style>
+    <link href="https://fonts.font.im/css?family=Roboto:400|Montserrat:700i" rel="stylesheet">
+    <title>1Mpx</title>
+</head>
+
+<body>
+    <p>Welcome to 1Mpx</p>
+    <p><span id="pxMove">0</span> / 1000000 px<br>on mousemove</p>
+</body>
+
+<script>
+    pxMove = 0;
+    onselectstart = function () { return false; }
+    onmousemove = function () {
+        pxMove += 1;
+        if (pxMove == 1e6) { alert("Finished!\nqqgroup{894656456}") };
+        document.getElementById("pxMove").innerHTML = pxMove;
+    }
+</script>
+
+</html>
